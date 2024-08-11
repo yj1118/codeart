@@ -31,8 +31,8 @@ namespace CodeArtTest.DTO
 
             Assert.AreEqual(1, dto.GetValue<int>("id"));
             Assert.AreEqual("刘备", dto.GetValue<string>("name"));
-            //Assert.AreEqual("{\"id\",\"name\"}", dto.GetCode(false));
             Assert.AreEqual("{\"id\":1,\"name\":\"刘备\"}", dto.GetCode());
+            Assert.AreEqual("{\"id\",\"name\"}", dto.GetSchemaCode());
         }
 
         [TestMethod]
